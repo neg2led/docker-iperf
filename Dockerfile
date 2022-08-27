@@ -9,10 +9,9 @@ RUN apk add --no-cache \
 COPY conf/supervisord.conf /etc/supervisord.conf
 COPY conf/iperf.conf /etc/supervisor/conf.d/iperf.conf
 
-ENV IPERF3_PORT=5201
+ENV IPERF_VER=iperf3
 ENV IPERF_PORT=5001
 
-EXPOSE 5001
 EXPOSE 5201
 
 ENTRYPOINT ["/usr/bin/supervisord"]
